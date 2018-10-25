@@ -1,0 +1,25 @@
+{
+  "name": "NewMakerBot",
+  "version": "1.0.0",
+  "description": "Telegram bot for launching welcome to new user at MakersUPV group",
+  "main": "index.js",
+  "author": {
+    "name": "Jaime",
+    "email": "jaimelaborda@gmail.com"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makers-upv/newmakerbot"
+  },
+  "dependencies": {
+    "geolib": "^2.0.24",
+    "get-json": "1.0.0",
+    "node-emoji": "^1.8.1",
+    "telegraf": "^3.16.0",
+    "telegraf-recast": "^2.1.0"
+  }
+}
