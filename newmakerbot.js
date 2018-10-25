@@ -41,6 +41,7 @@ bot.on('new_chat_members', (ctx) => {
   console.log(ctx.message.new_chat_participant);
   var nombre = ctx.message.new_chat_participant.first_name;
   var apellido = ctx.message.new_chat_participant.last_name;
+  var username = ctx.message.new_chat_participant.username;
   var isBot = ctx.message.new_chat_participant.is_bot;
 
   if (apellido == null) {
@@ -50,7 +51,7 @@ bot.on('new_chat_members', (ctx) => {
   if (isBot) {
     //Do nothing
   } else {
-    ctx.reply("¡Hola " + nombre + "!, bienvenido al grupo de MakersUPV.");
+    ctx.reply("¡Hola @" + username + "!, bienvenido al grupo de MakersUPV.");
     ctx.reply("🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖\n (respondiendo este formulario ganarás mil minipuntos makers)\nNombre: " + nombre + " " + apellido + "\nApodo:\nEstudio...:\n¿Qué quiero crear?:\n¿Cuáles son mis súperpoderes?:\n¿Qué quiero aprender en MakersUPV?:\n¿Qué son 8 bocabits?:\n¿Cuack?\n\nIMPORTANTE\nNo te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1\n\n\nUna vez terminado este ritual pasarás a ser aceptado por parte del resto de la comunidad! :sparkles:");
   }
 });
