@@ -10,7 +10,7 @@ Creación y matenimiento: Jaime Laborda - jaimelaborda@gmail.com
 const Telegraf = require('telegraf');
 const Token = 'BotFather_token_goes_here';
 
-const ranapepe = ['CAADBAADOQ4AAjZHEwABYUGtfJvIDiAC', 'CAADBAADbAYAAjZHEwABe0Wm_QNyWgcC', 'CAADBAADXgYAAjZHEwAB-2vZhZcVhRMC', 'CAADBAADhAYAAjZHEwABY_4JnOLbxX0C', 'CAADBAADhgYAAjZHEwABp_fhAiD4_GEC', 'CAADBAADdgYAAjZHEwABx9tJw309ZgABAg', 'CAADBAADXAYAAjZHEwABabKzEznrA-wC', 'CAADBAADWAYAAjZHEwABHT5IHCj5Tt4C', 'CAADBAADxw8AAjZHEwAB2twhZ_iM-jwC', ' CAADBAADfgYAAjZHEwABqUjJxUJ9ifgC', 'CAADBAADgAYAAjZHEwABbgj3xbMopMcC'];
+const ranapepe = ['CAADBAADOQ4AAjZHEwABYUGtfJvIDiAC', 'CAADBAADbAYAAjZHEwABe0Wm_QNyWgcC', 'CAADBAADXgYAAjZHEwAB-2vZhZcVhRMC', 'CAADBAADhAYAAjZHEwABY_4JnOLbxX0C', 'CAADBAADhgYAAjZHEwABp_fhAiD4_GEC', 'CAADBAADdgYAAjZHEwABx9tJw309ZgABAg', 'CAADBAADXAYAAjZHEwABabKzEznrA-wC', 'CAADBAADWAYAAjZHEwABHT5IHCj5Tt4C', 'CAADBAADxw8AAjZHEwAB2twhZ_iM-jwC', 'CAADBAADfgYAAjZHEwABqUjJxUJ9ifgC', 'CAADBAADgAYAAjZHEwABbgj3xbMopMcC'];
 
 const bot = new Telegraf(Token);
 
@@ -23,11 +23,7 @@ bot.command('testbot', (ctx) => {
 
 bot.command('ranapepe', (ctx) => {
   var chatId = ctx.chat.id;
-  var random = Math.floor((Math.random() * 11) + 1); //Del 1 al 10
-
-  if (random == 9 || random == 11) {
-    random--;
-  }
+  var random = Math.floor(Math.random() * ranapepe.length); //Del 0 al 10
 
   console.log("Random: " + random);
 
