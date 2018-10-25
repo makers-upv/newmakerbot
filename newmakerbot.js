@@ -7,8 +7,9 @@ bienvenida.
 Creación y matenimiento: Jaime Laborda - jaimelaborda@gmail.com
 ----------------------------------------------------------------------------*/
 
+require("dotenv").config();
 const Telegraf = require("telegraf");
-const token = "BotFather_token_goes_here";
+const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new Telegraf(token);
 
 bot.command("testbot", ctx => {
