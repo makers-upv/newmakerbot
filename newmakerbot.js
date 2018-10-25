@@ -12,8 +12,8 @@ const token = "BotFather_token_goes_here";
 const bot = new Telegraf(token);
 
 bot.command("testbot", ctx => {
-  const nombre = ctx.from.first_name;
-  ctx.reply("Hola " + nombre + ", estoy vivo!");
+  const { first_name } = ctx.from;
+  ctx.reply("Hola " + first_name + ", estoy vivo!");
 });
 
 const ranapepe = [
@@ -41,17 +41,18 @@ bot.command("ranapepe", ctx => {
 bot.on("new_chat_members", ctx => {
   console.log(ctx.message.new_chat_participant);
 
-  const isBot = ctx.message.new_chat_participant.is_bot;
-  if (isBot) return;
-
-  const nombre = ctx.message.new_chat_participant.first_name;
-  const apellido = ctx.message.new_chat_participant.last_name;
-  const username = ctx.message.new_chat_participant.username;
+  const {
+    first_name,
+    last_name,
+    username,
+    is_bot
+  } = ctx.message.new_chat_participant;
+  if (is_bot) return;
 
   ctx.reply(`¡Hola @${username}!, bienvenido al grupo de MakersUPV.`);
   ctx.reply(`🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖
  (respondiendo este formulario ganarás mil minipuntos makers)
-Nombre: ${nombre} ${apellido || ""}
+Nombre: ${first_name} ${last_name || ""}
 Apodo:
 Estudio...:
 ¿Qué quiero crear?:
