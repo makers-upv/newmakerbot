@@ -30,22 +30,18 @@ bot.command("ranapepe", (ctx) => {
 //Cuando un nuevo usuario
 bot.on("new_chat_members", (ctx) => {
   console.log(ctx.message.new_chat_participant);
+
+  const isBot = ctx.message.new_chat_participant.is_bot;
+  if (isBot) return
+
   const nombre = ctx.message.new_chat_participant.first_name;
   const apellido = ctx.message.new_chat_participant.last_name;
   const username = ctx.message.new_chat_participant.username;
-  const isBot = ctx.message.new_chat_participant.is_bot;
 
-  if (apellido == null) {
-    apellido = " ";
-  }
-
-  if (isBot) {
-    //Do nothing
-  } else {
-    ctx.reply(`¡Hola @${username}!, bienvenido al grupo de MakersUPV.`);
-    ctx.reply(`🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖
+  ctx.reply(`¡Hola @${username}!, bienvenido al grupo de MakersUPV.`);
+  ctx.reply(`🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖
  (respondiendo este formulario ganarás mil minipuntos makers)
-Nombre: ${nombre} ${apellido}
+Nombre: ${nombre} ${apellido || ""}
 Apodo:
 Estudio...:
 ¿Qué quiero crear?:
@@ -59,7 +55,6 @@ No te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1
 
 
 Una vez terminado este ritual pasarás a ser aceptado por parte del resto de la comunidad! ✨`);
-  }
 });
 
 bot.startPolling();
