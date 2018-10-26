@@ -31,6 +31,13 @@ const ranapepe = [
   "CAADBAADgAYAAjZHEwABbgj3xbMopMcC"
 ];
 
+const preguntas = [
+  "¿Que son 8 bocabits?",
+  "Pregunta 2",
+  "Pregunta 3",
+  "Pregunta 4",
+];
+
 bot.command("ranapepe", ctx => {
   const chatId = ctx.chat.id;
   const random = Math.floor(Math.random() * ranapepe.length); //Del 0 al 10
@@ -58,11 +65,12 @@ Apodo:
 Estudio...:
 ¿Qué quiero crear?:
 ¿Cuáles son mis súperpoderes?:
-¿Qué quiero aprender en MakersUPV?:
-¿Qué son 8 bocabits?:
-¿Cuack?
-
-IMPORTANTE
+¿Qué quiero aprender en MakersUPV?:`
++
+//Random questions
+preguntas[Math.floor(Math.random() * preguntas.length)]
++
+`IMPORTANTE
 No te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1
 
 
