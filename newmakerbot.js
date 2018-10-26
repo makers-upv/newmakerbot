@@ -32,10 +32,10 @@ const ranapepe = [
 ];
 
 const preguntas = [
-  "¿Que son 8 bocabits?",
-  "Pregunta 2",
-  "Pregunta 3",
-  "Pregunta 4",
+  "¿Que son 8 bocabits?: ",
+  "Pregunta 2: ",
+  "Pregunta 3: ",
+  "Pregunta 4: ",
 ];
 
 bot.command("ranapepe", ctx => {
@@ -65,12 +65,17 @@ Apodo:
 Estudio...:
 ¿Qué quiero crear?:
 ¿Cuáles son mis súperpoderes?:
-¿Qué quiero aprender en MakersUPV?:`
+¿Qué quiero aprender en MakersUPV?:
+`
 +
 //Random questions
+preguntas[Math.floor(Math.random() * preguntas.length)]+`
+`+
 preguntas[Math.floor(Math.random() * preguntas.length)]
 +
-`IMPORTANTE
+`
+
+IMPORTANTE
 No te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1
 
 
