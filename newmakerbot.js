@@ -33,9 +33,11 @@ const ranapepe = [
 
 const preguntas = [
   "¿Que son 8 bocabits?: ",
-  "Pregunta 2: ",
-  "Pregunta 3: ",
-  "Pregunta 4: ",
+  "Razona, ¿Edison o Tesla?: ",
+  "¿Cual es la gran respuesta del universo?: ",
+  "¿Cual es el Hola Mundo de Arduino?: ",
+  "Si tiramos una piedra roja en el mar azul, ¿qué le pasará?: ",
+  "¿1 + 1 = 10?: "
 ];
 
 bot.command("ranapepe", ctx => {
