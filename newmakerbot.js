@@ -31,6 +31,15 @@ const ranapepe = [
   "CAADBAADgAYAAjZHEwABbgj3xbMopMcC"
 ];
 
+const preguntas = [
+  "¿Que son 8 bocabits?: ",
+  "Razona, ¿Edison o Tesla?: ",
+  "¿Cual es la gran respuesta del universo?: ",
+  "¿Cual es el Hola Mundo de Arduino?: ",
+  "Si tiramos una piedra roja en el mar azul, ¿qué le pasará?: ",
+  "¿1 + 1 = 10?: "
+];
+
 bot.command("ranapepe", ctx => {
   const chatId = ctx.chat.id;
   const random = Math.floor(Math.random() * ranapepe.length); //Del 0 al 10
@@ -59,8 +68,14 @@ Estudio...:
 ¿Qué quiero crear?:
 ¿Cuáles son mis súperpoderes?:
 ¿Qué quiero aprender en MakersUPV?:
-¿Qué son 8 bocabits?:
-¿Cuack?
+`
++
+//Random questions
+preguntas[Math.floor(Math.random() * preguntas.length)]+`
+`+
+preguntas[Math.floor(Math.random() * preguntas.length)]
++
+`
 
 IMPORTANTE
 No te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1
