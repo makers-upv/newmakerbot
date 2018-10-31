@@ -1,13 +1,21 @@
 # NewMakerBot
-Telegram bot to welcome new makers at the MakersUPV oficial Telegram group. The bot is program in NodeJS using 
+Telegram bot to welcome new makers at the MakersUPV oficial Telegram group. The bot is program in NodeJS using Telegraf.
 
 
 
 # Developing new features for the bot
 
+In order to develop new features for the MakersUPV Telegram bot there is a process that needs to be follow. 
 
+1. First fork this Github repository to your own Github account
+2. Then clone this repository to your local environment and create a new branch named as follow:
+   * If it is a new feature: user-feature-1
+   * If it is a path: user-path-1
+3. Make the changes you need and do the commits you need
+4. Then push the changes to your remote repository
+5. Go to Github and make a pull request to master/develop branch on the original MakersUPV repository. 
 
-
+In case of any doubt please be in contact with the maintainerjaimelaborda@gmail.com
 
 # Deploy instructions
 
