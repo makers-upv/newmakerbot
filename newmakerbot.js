@@ -59,7 +59,7 @@ bot.on("new_chat_members", ctx => {
   } = ctx.message.new_chat_participant;
   if (is_bot) return;
 
-  ctx.reply(`¡Hola @${username}!, bienvenido al grupo de MakersUPV.`);
+  ctx.reply(`¡Hola ${username ? `@${username}` : first_name}!, bienvenido al grupo de MakersUPV.`);
   ctx.reply(`🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖
  (respondiendo este formulario ganarás mil minipuntos makers)
 Nombre: ${first_name} ${last_name || ""}
