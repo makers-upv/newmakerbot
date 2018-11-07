@@ -59,6 +59,18 @@ bot.on("new_chat_members", ctx => {
   } = ctx.message.new_chat_participant;
   if (is_bot) return;
 
+  /**
+   * Semillas para preguntas aleatorias
+   *
+   * Para que no salga la misma en las dos, para la segunda semilla retiramos una de las
+   * posibilidades. Si sale la misma en la primera y segunda, elegimos la posibilidad que
+   * retiramos. Así siempre existe la misma probabilidad de escoger cada opción, y no creamos un
+   * (posible) bucle infinito.
+   */
+  const seed1 = Math.floor(Math.random() * preguntas.length);
+  let seed2 = Math.floor(Math.random() * (preguntas.length - 1));
+  if (seed1 === seed2) seed2 = preguntas.length - 1;
+
   ctx.reply(
     `¡Hola ${
       username ? `@${username}` : first_name
@@ -73,13 +85,8 @@ Estudio...:
 ¿Qué quiero crear?:
 ¿Cuáles son mis súperpoderes?:
 ¿Qué quiero aprender en MakersUPV?:
-` +
-      //Random questions
-      preguntas[Math.floor(Math.random() * preguntas.length)] +
-      `
-` +
-      preguntas[Math.floor(Math.random() * preguntas.length)] +
-      `
+${preguntas[seed1]}
+${preguntas[seed2]}
 
 IMPORTANTE
 No te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1
