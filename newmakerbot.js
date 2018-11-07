@@ -17,6 +17,23 @@ bot.command("testbot", ctx => {
   ctx.reply("Hola " + first_name + ", estoy vivo!");
 });
 
+{
+  const commitSHA = require("child_process")
+    .execSync("git rev-parse HEAD")
+    .toString()
+    .trim();
+  const shortCommitSHA = commitSHA.slice(0, 7);
+  const { version, name, homepage } = require("./package.json");
+  const commitUrl = new (require("url")).URL(`commit/${commitSHA}`, homepage);
+  bot.command("version", ctx => {
+    ctx.reply(
+      `${name} v${version}
+Running commit [${shortCommitSHA}](${commitUrl})`,
+      { parse_mode: "markdown" }
+    );
+  });
+}
+
 const ranapepe = [
   "CAADBAADOQ4AAjZHEwABYUGtfJvIDiAC",
   "CAADBAADbAYAAjZHEwABe0Wm_QNyWgcC",
