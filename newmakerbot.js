@@ -54,7 +54,7 @@ bot.on("new_chat_members", ctx => {
   const {
     first_name,
     last_name,
-    username,
+    id,
     is_bot
   } = ctx.message.new_chat_participant;
   if (is_bot) return;
@@ -72,9 +72,10 @@ bot.on("new_chat_members", ctx => {
   if (seed1 === seed2) seed2 = preguntas.length - 1;
 
   ctx.reply(
-    `¡Hola ${
-      username ? `@${username}` : first_name
-    }!, bienvenido al grupo de MakersUPV.`
+    // Esta es la forma correcta de mencionar a alguien que no tiene nombre de usuario
+    // Sacado de https://core.telegram.org/bots/api#formatting-options
+    `¡Hola [${first_name}](tg://user?id=${id})!, bienvenido al grupo de MakersUPV.`,
+    { parse_mode: "markdown" }
   );
   ctx.reply(
     `🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖
