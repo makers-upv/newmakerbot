@@ -59,8 +59,13 @@ bot.on("new_chat_members", ctx => {
   } = ctx.message.new_chat_participant;
   if (is_bot) return;
 
-  ctx.reply(`¡Hola ${username ? `@${username}` : first_name}!, bienvenido al grupo de MakersUPV.`);
-  ctx.reply(`🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖
+  ctx.reply(
+    `¡Hola ${
+      username ? `@${username}` : first_name
+    }!, bienvenido al grupo de MakersUPV.`
+  );
+  ctx.reply(
+    `🤖 CUESTIONARIO DE BIENVENIDA PARA NUEV@S MAKERS 🤖
  (respondiendo este formulario ganarás mil minipuntos makers)
 Nombre: ${first_name} ${last_name || ""}
 Apodo:
@@ -68,20 +73,20 @@ Estudio...:
 ¿Qué quiero crear?:
 ¿Cuáles son mis súperpoderes?:
 ¿Qué quiero aprender en MakersUPV?:
-`
-+
-//Random questions
-preguntas[Math.floor(Math.random() * preguntas.length)]+`
-`+
-preguntas[Math.floor(Math.random() * preguntas.length)]
-+
-`
+` +
+      //Random questions
+      preguntas[Math.floor(Math.random() * preguntas.length)] +
+      `
+` +
+      preguntas[Math.floor(Math.random() * preguntas.length)] +
+      `
 
 IMPORTANTE
 No te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1
 
 
-Una vez terminado este ritual pasarás a ser aceptado por parte del resto de la comunidad! ✨`);
+Una vez terminado este ritual pasarás a ser aceptado por parte del resto de la comunidad! ✨`
+  );
 });
 
 bot.startPolling();
