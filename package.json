@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Telegram bot for launching welcome to new user at MakersUPV group",
-  "homepage": "https://github.com/makers-upv/newmakerbot#readme",
+  "homepage": "https://github.com/makers-upv/newmakerbot/#readme",
   "bugs": {
     "url": "https://github.com/makers-upv/newmakerbot/issues"
   },
