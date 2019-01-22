@@ -12,6 +12,8 @@ const Telegraf = require("telegraf");
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new Telegraf(token);
 
+const enlace_ema = 'http://makersupv.com/ema'
+
 bot.command("testbot", ctx => {
   const { first_name } = ctx.from;
   ctx.reply("Hola " + first_name + ", estoy vivo!");
@@ -107,7 +109,7 @@ ${preguntas[seed1]}
 ${preguntas[seed2]}
 
 IMPORTANTE
-No te olvides rellenar la EMA: https://goo.gl/forms/N8yXa4ApPrmqVbOm1
+No te olvides rellenar la EMA: ${enlace_ema}
 
 
 Una vez terminado este ritual pasarás a ser aceptado por parte del resto de la comunidad! ✨`
