@@ -93,7 +93,7 @@ bot.on("new_chat_members", ctx => {
   ctx.reply(
     // Esta es la forma correcta de mencionar a alguien que no tiene nombre de usuario
     // Sacado de https://core.telegram.org/bots/api#formatting-options
-    `¡Hola [${first_name}](tg://user?id=${id})!, bienvenido al grupo de MakersUPV.`,
+    `¡Hola [${first_name}](tg://user?id=${id})!, bienvenidx al grupo de MakersUPV.`,
     { parse_mode: "markdown" }
   );
   ctx.reply(

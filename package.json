@@ -1,6 +1,6 @@
 {
   "name": "newmakerbot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "Telegram bot for launching welcome to new user at MakersUPV group",
   "homepage": "https://github.com/makers-upv/newmakerbot/#readme",
