@@ -19,7 +19,7 @@ In case of any doubt please be in contact with the maintainer [jaimelaborda@gmai
 
 # Deploy for production
 
-In order to do some update to the code (add feature or correct some bugs) on the MakersUPV run environment it has been implemented a CI&CD (Continuous Integration & Deployment). This service runs on the background and will take care of deploying the code wherever a commit is merged into master branch. This is done by means of a service running on the Makers VPS that will take care of deploy update the new commit whenever Github Webhooks feature informs there is a new update. 
+In order to do some update to the code (add feature or correct some bugs) on the MakersUPV run environment it has been implemented a CI&CD (Continuous Integration & Deployment). This service runs on the background and will take care of deploying the code wherever a commit is merged into master branch. This is done by means of a service running on the Makers VPS that will take care of deploy update the new commit whenever Github Webhooks feature informs there is a new update (more info: [https://github.com/backmeupplz/ci-ninja](https://github.com/backmeupplz/ci-ninja)). 
 
 It is mandatory to ensure that the code runs perfectly without crashes. The responsible to accept the merge request will take care of that before merging to the master branch but it will be awsome if you could help him.
 
