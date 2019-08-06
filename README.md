@@ -15,9 +15,15 @@ In order to develop new features for the MakersUPV Telegram bot there is a proce
 4. Then push the changes to your remote repository
 5. Go to Github and make a pull request to master/develop branch on the original MakersUPV repository. 
 
-In case of any doubt please be in contact with the maintainerjaimelaborda@gmail.com
+In case of any doubt please be in contact with the maintainer [jaimelaborda@gmail.com](mailto:jaimelaborda@gmail.com)
 
-# Deploy instructions
+# Deploy for production
+
+In order to do some update to the code (add feature or correct some bugs) on the MakersUPV run environment it has been implemented a CI&CD (Continuous Integration & Deployment). This service runs on the background and will take care of deploying the code wherever a commit is merged into master branch. This is done by means of a service running on the Makers VPS that will take care of deploy update the new commit whenever Github Webhooks feature informs there is a new update. 
+
+It is mandatory to ensure that the code runs perfectly without crashes. The responsible to accept the merge request will take care of that before merging to the master branch but it will be awsome if you could help him.
+
+# Deploy instructions on your own server
 
 1. Create a user to run the service with  and clone the repo to the production environment, this can be either a VPS running NodeJS or a local remote server. Please take into account that the server must have Internet connection in order to communicate with Telegram bot API.
 
