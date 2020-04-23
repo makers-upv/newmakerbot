@@ -12,7 +12,7 @@ const Telegraf = require("telegraf");
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new Telegraf(token);
 
-const enlace_ema = 'http://makersupv.com/ema'
+const enlace_formulario = 'http://makersupv.com/hazte-maker'
 
 bot.command("testbot", ctx => {
   const { first_name } = ctx.from;
@@ -109,7 +109,7 @@ ${preguntas[seed1]}
 ${preguntas[seed2]}
 
 IMPORTANTE
-No te olvides rellenar la EMA: ${enlace_ema}
+No te olvides rellenar el formulario de la web: ${enlace_formulario}
 
 
 Una vez terminado este ritual pasarás a ser aceptado por parte del resto de la comunidad! ✨`
